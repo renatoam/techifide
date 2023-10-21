@@ -5,3 +5,4 @@ type NativeListItem = React.DetailedHTMLProps<React.HTMLAttributes<HTMLLIElement
 type NativeButton = React.DetailedHTMLProps<React.HTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 type NativeText = React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement & HTMLLabelElement & HTMLParagraphElement & HTMLSpanElement>, HTMLHeadingElement & HTMLLabelElement & HTMLParagraphElement & HTMLSpanElement>
 type NativeInput = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+type OverrideRef = ((instance: (HTMLElement & HTMLDivElement) | null) => void) | RefObject<HTMLElement & HTMLDivElement> | null

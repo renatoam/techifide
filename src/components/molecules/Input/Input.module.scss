@@ -1,0 +1,39 @@
+@use "/src/styles/colors" as c;
+
+.input {
+  background-color: c.$background;
+  border: .1rem solid c.$input;
+  color: c.$text;
+  border-radius: .4rem;
+  height: clamp(4.4rem, 3.5vw + .1rem, 6.4rem);
+  padding-inline-start: 4rem;
+  padding-inline-end: 1.6rem;
+  width: 100%;
+  
+  &__control {
+    position: relative;
+  }
+  
+  &__icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 2rem;
+    z-index: 1;
+  }
+
+  &::-ms-reveal {
+    display: none;
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    border: .4rem solid c.$input;
+    outline: c.$input auto .4rem;
+  }
+
+  &::placeholder {
+    color: c.$text;
+  }
+}
