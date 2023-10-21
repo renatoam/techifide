@@ -1,0 +1,7 @@
+@use "/src/styles/variables" as v;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: v.$sp-sm;
+}
