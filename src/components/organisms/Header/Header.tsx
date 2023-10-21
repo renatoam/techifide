@@ -10,7 +10,7 @@ function Header() {
     const root = document.querySelector('html')
     root?.classList.toggle('dark')
     const newMode = root?.classList.contains('dark') ? 'Light' : 'Dark'
-    setMode(newMode) 
+    setMode(newMode)
   }
   
   return (
