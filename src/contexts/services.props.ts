@@ -16,8 +16,8 @@ export interface Country {
 
 export interface ServicesContextProps {
   countries: Country[]
-  getCountryByName(name: string): unknown
-  getCountriesByRegion(name: string): unknown
+  getCountryByName(name: string): any
+  getCountriesByRegion(name: string): any
 }
 
 export interface ServicesContextProviderProps {

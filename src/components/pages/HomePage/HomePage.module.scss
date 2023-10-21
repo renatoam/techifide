@@ -1,0 +1,57 @@
+@use "/src/styles/colors" as c;
+
+.container {
+  height: 100%;
+  margin: auto;
+  max-inline-size: clamp(28rem, 85vw, 144rem);
+  padding-block: 2.4rem;
+  width: 100%;
+
+  background-color: c.$background;
+}
+
+.list {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  margin-inline: auto;
+  padding-block-start: 4rem;
+}
+
+.card {
+  background-color: c.$background;
+  border-radius: .4rem;
+  box-shadow: 0 .1rem 0.2rem 0.2rem rgba(17, 21, 23, 0.1);
+  cursor: pointer;
+  max-inline-size: 30rem;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__info {
+    padding: 2.4rem;
+  
+    span {
+      font-weight: 800;
+    }
+  }
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  justify-content: space-between;
+
+  > * {
+    width: 24rem;
+
+    @media (width < 600px) {
+      width: 100%;
+    }
+  }
+}
