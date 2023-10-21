@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const httpClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL ?? ''
+  baseURL: import.meta.env.VITE_API_BASE_URL ?? 'https://restcountries.com/v3.1/'
 })
 
 httpClient.interceptors.request.use(config => {
