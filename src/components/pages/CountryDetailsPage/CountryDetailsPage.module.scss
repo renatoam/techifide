@@ -1,0 +1,45 @@
+@use "/src/styles/variables" as v;
+
+.details {
+  height: 100%;
+  margin: auto;
+  max-inline-size: clamp(28rem, 85vw, 144rem);
+  padding-block: v.$sp-xl;
+  width: 100%;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: v.$xsp-xs;
+    padding-block: v.$xsp-xl;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: v.$sp-md;
+  }
+
+  &__columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v.$sp-xl;
+  }
+}
+
+.border {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$sp-sm;
+
+  > p {
+    font-weight: 600;
+  }
+}
+
+.info {
+  span {
+    font-weight: 600;
+  }
+}
