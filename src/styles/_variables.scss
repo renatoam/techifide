@@ -11,7 +11,30 @@ $xsp-md: 5.6rem;
 $xsp-lg: 6.4rem;
 $xsp-xl: 7.2rem;
 
+// Font
+$fs-sm: 1.4rem;
+$fs-md: 1.6rem;
+$fs-lg: 2.4rem;
+$fs-xl: 3.2rem;
+
+$fw-light: 300;
+$fw-semi: 600;
+$fw-bold: 800;
+
 // Generic Sizes
-$s1: .1rem;
-$s2: .2rem;
-$s3: .3rem;
+$sz-1: .1rem;
+$sz-2: .2rem;
+$sz-3: .3rem;
+$sz-4: .4rem;
+
+$big-sz-1: .8rem;
+$big-sz-2: 1.6rem;
+$big-sz-3: 2.4rem;
+$big-sz-4: 3.2rem;
+$big-sz-5: 4rem;
+$big-sz-6: 4.8rem;
+$big-sz-7: 5.4rem;
+
+// Misc
+$transition: all .4s ease-in-out;
+$shadow: 0 $sz-2 $sz-4 $sz-1 rgba(0, 0, 0, 0.05);

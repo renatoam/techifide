@@ -1,13 +1,14 @@
 @use "/src/styles/colors" as c;
+@use "/src/styles/variables" as v;
 
 .input {
   background-color: c.$background;
-  border: .1rem solid c.$input;
+  box-shadow: v.$shadow;
   color: c.$text;
-  border-radius: .4rem;
-  height: clamp(4.4rem, 3.5vw + .1rem, 6.4rem);
-  padding-inline-start: 4rem;
-  padding-inline-end: 1.6rem;
+  border-radius: v.$sz-4;
+  height: v.$big-sz-6;
+  padding-inline-start: v.$xsp-xs;
+  padding-inline-end: v.$sp-md;
   width: 100%;
   
   &__control {
@@ -18,7 +19,7 @@
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 2rem;
+    left: v.$big-sz-3;
     z-index: 1;
   }
 
@@ -29,8 +30,8 @@
   &:focus,
   &:focus-visible,
   &:focus-within {
-    border: .4rem solid c.$input;
-    outline: c.$input auto .4rem;
+    border: v.$sz-1 solid c.$input;
+    outline: c.$input auto v.$sz-4;
   }
 
   &::placeholder {

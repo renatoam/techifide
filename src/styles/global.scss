@@ -1,4 +1,5 @@
 @use "./colors" as c;
+@use "./variables" as v;
 @use "./reset";
 
 html {
@@ -25,7 +26,7 @@ body {
   background-color: c.$background;
   color: c.$text;
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.4rem;
+  font-size: v.$fs-sm;
   overflow-x: hidden;
-  transition: all .4s ease-in-out;
+  transition: v.$transition;
 }

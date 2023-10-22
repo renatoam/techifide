@@ -3,16 +3,15 @@
 
 .button {
   background-color: c.$elements;
-  border-radius: v.$s2;
-  box-shadow: 0 0 v.$s2 v.$s2 rgba(0, 0, 0, 0.1);
+  border-radius: v.$sz-2;
+  box-shadow: 0 0 v.$sz-2 v.$sz-2 rgba(0, 0, 0, 0.1);
   color: c.$text;
   cursor: pointer;
   display: flex;
-  font-weight: 500;
   gap: v.$sp-sm;
   padding-block: v.$sp-xs;
   padding-inline: v.$sp-lg;
-  transition: all .2s ease-in-out;
+  transition: v.$transition;
 
   &:hover,
   &:active {
@@ -23,6 +22,6 @@
   &:focus-visible,
   &:focus-within {
     background-color: c.$background;
-    outline: v.$s1 solid c.$input;
+    outline: v.$sz-1 solid c.$input;
   }
 }

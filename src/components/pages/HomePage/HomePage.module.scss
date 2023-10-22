@@ -1,10 +1,11 @@
 @use "/src/styles/colors" as c;
+@use "/src/styles/variables" as v;
 
 .container {
   height: 100%;
   margin: auto;
   max-inline-size: clamp(28rem, 85vw, 144rem);
-  padding-block: 2.4rem;
+  padding-block: v.$sp-lg;
   width: 100%;
 
   background-color: c.$background;
@@ -12,30 +13,34 @@
 
 .list {
   display: grid;
-  gap: 2.4rem;
+  gap: v.$sp-lg;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   margin-inline: auto;
-  padding-block-start: 4rem;
+  padding-block-start: v.$xsp-xs;
 }
 
 .card {
   background-color: c.$elements;
-  border-radius: .4rem;
-  box-shadow: 0 .1rem 0.2rem 0.2rem rgba(17, 21, 23, 0.1);
+  border-radius: v.$sz-4;
+  box-shadow: v.$shadow;
   cursor: pointer;
   max-inline-size: 30rem;
   overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  transition: v.$transition;
 
   &:hover {
     transform: scale(1.05);
   }
 
+  h2 {
+    font-size: v.$fs-md;
+  }
+
   &__info {
-    padding: 2.4rem;
+    padding: v.$sp-lg;
   
     span {
-      font-weight: 800;
+      font-weight: v.$fw-semi;
     }
   }
 }
@@ -44,7 +49,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: .8rem;
+  gap: v.$sp-sm;
   justify-content: space-between;
 
   > * {

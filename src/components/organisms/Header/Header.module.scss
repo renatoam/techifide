@@ -3,8 +3,10 @@
 
 .header {
   background-color: c.$elements;
-  box-shadow: 0 .2rem .4rem .1rem rgba(0, 0, 0, 0.05);
+  box-shadow: v.$shadow;
   height: 8.8rem;
+  position: relative;
+  z-index: 1;
   
   &__container {
     align-items: center;
@@ -23,7 +25,7 @@
     margin-inline-start: auto;
 
     p {
-      font-weight: 800;
+      font-weight: v.$fw-semi;
     }
   }
 }

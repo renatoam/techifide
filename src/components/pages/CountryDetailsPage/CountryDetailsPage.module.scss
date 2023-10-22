@@ -1,11 +1,16 @@
 @use "/src/styles/variables" as v;
 
 .details {
+  font-size: v.$fs-md;
   height: 100%;
   margin: auto;
   max-inline-size: clamp(28rem, 85vw, 144rem);
   padding-block: v.$sp-xl;
   width: 100%;
+
+  h2 {
+    font-size: v.$fs-xl;
+  }
 
   &__container {
     display: grid;
@@ -34,12 +39,12 @@
   gap: v.$sp-sm;
 
   > p {
-    font-weight: 600;
+    font-weight: v.$fw-semi;
   }
 }
 
 .info {
   span {
-    font-weight: 600;
+    font-weight: v.$fw-semi;
   }
 }

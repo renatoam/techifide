@@ -2,7 +2,7 @@ import { Icon, Typography, Wrapper } from '@/components/atoms';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import { memo, useState } from 'react';
 import styles from './Header.module.scss';
- 
+
 function Header() {
   const [mode, setMode] = useState('Dark')
 
