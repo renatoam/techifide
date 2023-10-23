@@ -14,12 +14,22 @@ export interface Country {
   }
 }
 
-export interface ServicesContextProps {
-  countries: Country[]
-  getCountryByName(name: string): any
-  getCountriesByRegion(name: string): any
-}
-
 export interface ServicesContextProviderProps {
   children: ReactNode
+}
+
+export type ControlStateType = {
+  filtered: Country[]
+  selected: string
+}
+
+type FilterType = { type: 'FILTER', payload: Country[] }
+type RegionType = { type: 'REGION', payload: string }
+export type ActionType = FilterType | RegionType
+
+export interface ServicesContextProps {
+  getCountryByName(name: string): Promise<Country[]>
+  getCountriesByRegion(name: string): Promise<Country[]>
+  controlState: ControlStateType
+  dispatch: React.Dispatch<ActionType>
 }
