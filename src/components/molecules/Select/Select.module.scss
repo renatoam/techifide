@@ -30,6 +30,7 @@
     left: 0;
     max-height: 0;
     opacity: 0;
+    overflow: hidden;
     position: absolute;
     top: calc(100% + v.$sp-sm);
     transition: v.$transition;

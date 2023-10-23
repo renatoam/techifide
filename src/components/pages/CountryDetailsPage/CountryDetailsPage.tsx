@@ -1,12 +1,12 @@
 import { Button } from "@/components/atoms"
-import useDetails from "@/hooks/useDetails"
 import CountryDetailsPageBorder from "./CountryDetailsPageBorder"
 import CountryDetailsPageImage from "./CountryDetailsPageImage"
 import CountryDetailsPageInfo from "./CountryDetailsPageInfo"
 import CountryDetailsPageWrapper from "./CountryDetailsPageWrapper"
+import { UseDetails, useDetails } from "@/hooks"
 
 export default function CountryDetailsPage() {
-  const { isError, isLoading, country } = useDetails()
+  const { isError, isLoading, country }: UseDetails = useDetails()
 
   if (isLoading) return <h1>Loading...</h1>
   if (isError || !country) return (

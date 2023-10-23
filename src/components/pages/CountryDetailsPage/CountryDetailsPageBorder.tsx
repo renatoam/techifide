@@ -1,11 +1,11 @@
 import { Button, Typography, Wrapper } from "@/components/atoms";
 import { memo } from "react";
 import styles from "./CountryDetailsPage.module.scss"
-import useDetails from "@/hooks/useDetails";
 import { Link } from "react-router-dom";
+import { UseDetails, useDetails } from "@/hooks";
 
 function CountryDetailsPageBorder() {
-  const { borderCountries } = useDetails()
+  const { borderCountries }: UseDetails = useDetails()
   return (
     <Wrapper className={styles.border}>
       <Typography element="p">Border Countries: </Typography>

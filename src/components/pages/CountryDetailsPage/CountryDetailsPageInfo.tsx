@@ -1,11 +1,11 @@
 import { Typography, Wrapper } from "@/components/atoms"
 import { PropsWithChildren, memo } from "react"
 import styles from "./CountryDetailsPage.module.scss"
-import useDetails from "@/hooks/useDetails"
-import { CountryKeys } from "@/contexts/services.props"
+import { CountryKeys } from "@/contexts/homeServices.props"
+import { UseDetails, useDetails } from "@/hooks"
 
 function CountryDetailsPageInfo(props: PropsWithChildren) {
-  const { countryDetails } = useDetails()
+  const { countryDetails }: UseDetails = useDetails()
 
   if (!countryDetails) return <p>Country data unavailable.</p>
 
@@ -18,7 +18,7 @@ function CountryDetailsPageInfo(props: PropsWithChildren) {
             if (index > 5 || key === 'name') return
             const detail = countryDetails[key as CountryKeys]
             return (
-              <Typography element="p">
+              <Typography element="p" key={detail.label}>
                 <span>{detail.label}</span>
                 {detail.value}
               </Typography>
@@ -30,7 +30,7 @@ function CountryDetailsPageInfo(props: PropsWithChildren) {
             if (index < 6) return
             const detail = countryDetails[key as CountryKeys]
             return (
-              <Typography element="p">
+              <Typography element="p" key={detail.label}>
                 <span>{detail.label}</span>
                 {detail.value}
               </Typography>

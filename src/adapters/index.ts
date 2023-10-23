@@ -1,4 +1,4 @@
-import { Country, CountryDetail, GetCountryDetails } from "@/contexts/services.props";
+import { Country, CountryDetail, GetCountryDetails } from "@/contexts/homeServices.props";
 
 export function getNativeName(country: Country) {
   const name = Object.keys(country.name.nativeName)

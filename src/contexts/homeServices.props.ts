@@ -58,7 +58,6 @@ type RegionType = { type: 'REGION', payload: string }
 export type ActionType = FilterType | RegionType
 
 export interface ServicesContextProps {
-  getBorderCountries(country: Country): Promise<Country[]>
   getCountryByName(name: string): Promise<Country[]>
   getCountriesByRegion(name: string): Promise<Country[]>
   controlState: ControlStateType

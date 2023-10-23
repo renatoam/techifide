@@ -7,11 +7,10 @@ import {
   Country,
   ServicesContextProps,
   ServicesContextProviderProps
-} from "./services.props";
+} from "./homeServices.props";
 
 export const ServicesContext = createContext<ServicesContextProps>({
   getCountryByName: async (_name: string) => [],
-  getBorderCountries: async (_country: Country) => [],
   getCountriesByRegion: async (_region: string) => [],
   dispatch: () => {},
   controlState: initialControlState
@@ -51,25 +50,13 @@ export const ServicesContextProvider = ({ children }: ServicesContextProviderPro
     }
   }
 
-  async function getBorderCountries(country: Country): Promise<Country[]> {
-    try {
-      const requests = country.borders.map((code: string) => httpClient.get<Country>(`/alpha/${code}`))
-      const responses = await Promise.all(requests)
-      return responses.flatMap(response => response.data)
-    } catch (error) {
-      return []
-    }
-  }
-
   const value = useMemo(() => ({
     getCountryByName,
-    getBorderCountries,
     getCountriesByRegion,
     controlState,
     dispatch
   }), [
     getCountryByName,
-    getBorderCountries,
     getCountriesByRegion,
     controlState,
     dispatch

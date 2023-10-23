@@ -1,4 +1,4 @@
-import { useServices } from "@/contexts/services"
+import { useServices } from "@/contexts/homeServices"
 import { ChangeEvent, MouseEvent, useCallback, useEffect } from "react"
 
 export type UseCountries = ReturnType<typeof useCountries>

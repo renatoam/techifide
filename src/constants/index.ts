@@ -1,4 +1,4 @@
-import { ControlStateType } from "@/contexts/services.props"
+import { ControlStateType } from "@/contexts/homeServices.props"
 
 export const REGIONS = ["Africa", "America", "Asia", "Europe", "Oceania"]
 export const initialControlState: ControlStateType = {

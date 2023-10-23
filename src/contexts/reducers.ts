@@ -1,4 +1,4 @@
-import { ControlStateType, ActionType } from "./services.props"
+import { ControlStateType, ActionType } from "./homeServices.props"
 
 export const controlReducer = (state: ControlStateType, action: ActionType) => {
   if (action.type === "FILTER") {

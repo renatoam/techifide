@@ -1,8 +1,7 @@
-import { Typography, Wrapper } from "@/components/atoms";
-import { Image } from "@/components/molecules";
+import { Wrapper } from "@/components/atoms";
 import { UseCountries, useCountries } from "@/hooks";
 import { memo } from "react";
-import { Link } from "react-router-dom";
+import HomeCard from "./HomeCard";
 import styles from "./HomePage.module.scss";
 
 function HomeList() {
@@ -10,20 +9,7 @@ function HomeList() {
   return (
     <Wrapper role="banner" className={styles.list}>
       {filtered.map(country => (
-        <Link
-          key={`${country.name.common}_${country.tld}`}
-          to={`/country/${country.name.common.toLowerCase()}`}
-        >
-          <Wrapper className={styles.card}>
-            <Image src={country.flags.svg} alt={country.flags.alt} height={200} />
-            <Wrapper className={styles.card__info}>
-              <Typography element='h2'>{country.name.common}</Typography>
-              <Typography element='p'><span>Population: </span>{country.population}</Typography>
-              <Typography element='p'><span>Region: </span>{country.region}</Typography>
-              <Typography element='p'><span>Capital: </span>{country.capital}</Typography>
-            </Wrapper>
-          </Wrapper>
-        </Link>
+        <HomeCard key={country.name.common} country={country} />
       ))}
     </Wrapper>
   )

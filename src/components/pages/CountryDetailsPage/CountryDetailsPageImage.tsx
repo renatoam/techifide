@@ -1,11 +1,11 @@
 import { Wrapper } from "@/components/atoms";
 import { Image } from "@/components/molecules";
-import useDetails from "@/hooks/useDetails";
 import { memo } from "react";
 import styles from "./CountryDetailsPage.module.scss";
+import { UseDetails, useDetails } from "@/hooks";
 
 function CountryDetailsPageImage() {
-  const { country } = useDetails()
+  const { country }: UseDetails = useDetails()
 
   if (!country) return <p>Image not available.</p>
 
